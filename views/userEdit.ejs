@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %> 
+<body>
+    <%- include('partials/header') %>
+    <h1><%= title %> <%= user.id %></h1>
+    <div class="col-12">
+        <form action="/userEdit/<%= user.id %>?_method=PUT" method="POST">
+            <div>
+                <div>
+                    <br>
+                    <input class="form-control form-control-sm"type="text" id="name" name="name" value="<%= user.name %>" placeholder="Nombre" />
+                </div>
+                <div>
+                    <br>
+                    <input class="form-control form-control-sm"type="text" id="last_name" name="last_name" value="<%= user.last_name %>" placeholder="Apellido"/>
+                </div>
+                <div>
+                    <br>
+                    <input class="form-control form-control-sm" type="email" id="email" name="email" value="<%= user.email %>" placeholder="Correo"/>
+                </div>
+
+                <div>
+                    <br>
+                    <button class="btn btn-success" type="submit" name="id" value="<%= user.id %>">Guardar</button>
+                    <a href="/userDetail/<%= user.id %>"><button class="btn btn-danger" type="button">Cancelar</button></a>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>

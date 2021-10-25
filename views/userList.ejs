@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <%- include('partials/head') %> 
+  <body>
+      <%- include('partials/header') %>
+    <h1><%= title %></h1>
+
+    <% users.forEach(user => { %>
+      <div class="card text-center" >
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="/userList">Usuario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/userDetail/<%= user.id %>">Detalle</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title"> <%= user.last_name %> <%= user.name %></h1>
+          <a href="/userDetail/<%= user.id %>" class="btn btn-primary" style="margin: 10px">Detalle</a>
+        </div>
+      </div>
+    <% }) %>
+
+
+  </body>
+</html>

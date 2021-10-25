@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %> 
+<body>
+    <%- include('partials/header') %>
+    <h1><%= title %> </h1>
+    <div class="col-12">
+        <form action="" method="POST">
+            <div>
+                <div >
+                    <label for="name"></label>
+                    <input class="form-control form-control-sm"type="text" id="name" name="name" placeholder="Nombre" />
+                </div>
+                <div>
+                    <label for="last_name"></label>
+                    <input class="form-control form-control-sm"type="text" id="last_name"name="last_name" placeholder="Apellido"/>
+                </div>
+                <div>
+                    <label for="email"></label>
+                    <input class="form-control form-control-sm"type="email" id="email" name="email"  placeholder="Correo"/>
+                </div>
+    
+            </div>  
+            <div>
+                <br>
+                <button class="btn btn-success"type="submit">
+                    Registrar usuario
+                </button>
+                <a href="/">
+                    <button class="btn btn-danger" type="button">Cancelar</button>
+                </a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
